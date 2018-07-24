@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #div1{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            width:100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        var x=-1;
+        var y=-1;
+        function down(event) {
+            e= event || window.event;
+            var movex=e.screenX;
+            var movey=e.screenY;
+            if(div1.onmouseup!=up)
+            div1.onmouseup=up;
+            div1.onmousemove=move;
+//            x=parseInt("23jk");
+//            alert(x)
+            alert(e+movex);
+//            x=parseInt(e.style.left);
+//            y=parseInt(e.style.height);
+        }
+
+        function move(e) {
+            div1.innerHTML+="move";
+        }
+        function up(e) {
+            div1.onmousemove=null;
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" onmousedown="down(this)" ></div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+        onload=function (){
+            var A=new ff2();
+            ff2.prototype.a=2;
+//            A.prototype.b=2;
+            A.prototype=ff2.prototype;
+            var B=new A();
+            B.do();
+
+        }
+        function ff2() {
+            this.do=function () {
+                alert(this.a);
+            }
+//            this.do();
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

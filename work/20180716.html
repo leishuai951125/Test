@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        (function () {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("post","https://blog.csdn.net/",true);
+//            xmlHttp.send(null);
+            xmlHttp.send("name=zhangsan");
+//            xmlHttp.responseText;
+//            xmlHttp.responseXML;
+            xmlHttp.onreadystatechange=function(){
+                if(xmlHttp.status==200&&xmlHttp.readyState==4){
+                    alert(xmlHttp.responseXML);
+                }
+            }
+        })();
+    </script>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        *{
+            padding:0;
+            margin: 0;
+        }
+        #div2{
+            width: 100px;
+            margin: 20px 20px 20px 20px;
+            float: right;
+            background-color: green;
+        }
+        #div3{
+            float: right;
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <div id="div2">
+        <div id="div3">
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
